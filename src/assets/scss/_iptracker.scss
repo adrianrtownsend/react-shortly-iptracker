@@ -1,0 +1,84 @@
+.iptracker {
+  font-family: 'Rubin';
+
+  &__header {
+    background-image: url('../images/ip-address-tracker/pattern-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include breakpoint-up(medium) {
+      padding: 3rem 3rem 8rem 3rem;
+    }
+
+    @include breakpoint-down(medium) {
+      padding: 3rem 3rem 10rem 3rem;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+      text-align: center;
+      color: $white;
+    }
+  }
+
+  &__input {
+    input {
+      border-radius: 15px 0 0 15px;
+      padding: .75rem;
+    }
+
+    button {
+      border: 0;
+      background-color: black;
+      color: white;
+      font-weight: 700;
+      border-radius: 0 15px 15px 0;
+      padding: .8rem 1rem;
+    }
+  }
+
+  &__map {
+    position: relative;
+  }
+
+  &__map, #mapid {
+    @include breakpoint-up(medium) {
+      height: 300px;
+    }
+
+    @include breakpoint-down(medium) {
+      height: 580px;
+    }
+  }
+
+  &__stats {
+    position: absolute;
+
+    @include breakpoint-up(medium) {
+      top: -3rem;
+    }
+
+    @include breakpoint-down(medium) {
+      top: -9rem;
+    }
+
+    &__container {
+      background-color: white;
+      border-radius: 15px;
+      padding: 2rem 1rem;
+      box-shadow: 3px 30px 80px $gray;
+
+      @include breakpoint-down(medium) {
+        text-align: center;
+      }
+
+      p {
+        color: $darkGray;
+        font-size: .75rem;
+        font-weight: 900;
+        letter-spacing: .1rem;
+      }
+    }
+  }
+}

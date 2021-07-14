@@ -1,0 +1,54 @@
+.footer {
+  background-color: $veryDarkViolet;
+  color: $white;
+
+  &__logo {
+    svg path {
+      fill: $white;
+    }
+  }
+
+  &__links {
+    a {
+
+      &:hover {
+        color: $cyan;
+        transition: 150ms;
+      }
+
+      color: $gray;
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+    }
+  } 
+  
+  &__social {
+    a {
+
+      svg path {
+        transition: fill 150ms ease-in-out;
+      }
+
+      &:hover svg path {
+        fill: $cyan;
+      }
+    }
+
+    a:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__mobile {
+    text-align: center;
+
+    h1 {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    
+    h5 {
+      font-weight: 500;
+    }
+  }
+}

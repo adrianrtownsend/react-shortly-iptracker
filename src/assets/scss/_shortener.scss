@@ -1,0 +1,71 @@
+.shortener {
+  position: absolute;
+  z-index: 1;
+  top: -3.5rem;
+  
+
+  &__block {
+    padding: 2rem;
+    border-radius: 5px;
+    background-image: url('../images/url-shortener/bg-shorten-desktop.svg');
+    background-size: cover;
+    background-color: $darkViolet;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__input {
+    border-radius: 5px;
+    padding: .75rem;
+  }
+
+  &__button {
+    background-color: $cyan;
+    padding: .75rem 0;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    margin-bottom: 0;
+
+    &:hover {
+      transition: opacity 300ms ease-in-out;
+    }
+  }
+
+  &__links {
+    border-radius: 5px;
+    background-color: white;
+    padding: 1rem;
+    margin: 0 0 1rem 0;
+  }
+
+  &__links__long, &__links__short, &__links__button button {
+    font-weight: 700;
+  }
+
+  &__links__long {
+    color: $darkViolet;
+  }
+
+  &__links__short{
+    color: $cyan;
+    text-align: right;
+    padding: 0;
+  }
+
+  &__links__button button {
+    color: white;
+    
+  }
+
+  .custom-button-copy {
+    background-color: $cyan;
+  }
+
+  .custom-button-copied {
+    background-color: $darkViolet;
+  }
+
+
+}

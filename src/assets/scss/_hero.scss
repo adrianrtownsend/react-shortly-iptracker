@@ -1,0 +1,42 @@
+.hero {
+  margin-bottom: 8rem;
+
+  &__image {
+    width:100%;
+    position: relative;
+    background-image: url('../images/url-shortener/illustration-working.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__text {    
+    h1 {
+      @include breakpoint-up(xlarge) {
+        font-size: 6rem;
+      }
+      @include breakpoint-down(xlarge) {
+        font-size: 4.5rem;
+      }
+      @include breakpoint-down(large) {
+        font-size: 3rem;
+      }
+      margin-bottom: 1rem;
+    }
+
+    p {
+      @include breakpoint-up(xlarge) {
+        font-size: 1.7rem;
+      }
+      @include breakpoint-down(large) {
+        font-size: 1.4rem;
+      }
+      @include breakpoint-down(large) {
+        font-size: 1rem;
+      }
+      margin-bottom: 2rem;
+    }
+    
+  }
+
+}

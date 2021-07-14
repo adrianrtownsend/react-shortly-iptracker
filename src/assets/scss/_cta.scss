@@ -1,0 +1,21 @@
+.cta {
+
+  color: $white;
+
+  &__image {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: $darkViolet;
+
+    @include breakpoint-up(medium) {
+      background-image: url('../images/url-shortener/bg-boost-desktop.svg');
+    }
+
+    @include breakpoint-down(medium) {
+      background-image: url('../images/url-shortener/bg-boost-mobile.svg');
+    }
+  }
+
+}
