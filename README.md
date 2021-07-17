@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# URL Shortener and IP Tracker Landing Page Conversion
+This project is a React Framework conversion for Frontend Mentor's URL Shortener and IP tracker Landing Page.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Landing Page Screenshot](https://github.com/adrianrtownsend/react-shortly/blob/main/src/assets/images/ip-tracker-url-shortener-screenshot.png?raw=true)
+
+
+Link for original code challenge [here for url shortener](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G) and [here or ip tracker](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0)
+
+Starting project source code provided by [github.com/thecodercoder](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G)
 
 ## Available Scripts
 

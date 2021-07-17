@@ -34,7 +34,7 @@ const IPTracker = () => {
   const [mapCoor, setMapCoor] = useState({lat: 37.38605, lng: -122.08385});
 
   const getLocation = (ipAddress?: string) => {
-    fetch(`https://geo.ipify.org/api/v1?apiKey=${process.env.REACT_APP_LEAFLET_API_KEY}&ipAddress=${ipAddress ? ipAddress : '8.8.8.8'}`)
+    fetch(`https://geo.ipify.org/api/v1?apiKey=${process.env.REACT_APP_LEAFLET_API_KEY}&ipAddress=${ipAddress ? ipAddress : ''}`)
     .then(res => res.json())
     .then(
       res => {        
