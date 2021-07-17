@@ -1,12 +1,34 @@
 # URL Shortener and IP Tracker Landing Page Conversion
 This project is a React Framework conversion for Frontend Mentor's URL Shortener and IP tracker Landing Page.
 
-![Landing Page Screenshot](https://github.com/adrianrtownsend/react-shortly/blob/main/src/assets/images/ip-tracker-url-shortener-screenshot.png?raw=true)
-
+![Landing Page Screenshot](https://github.com/adrianrtownsend/react-shortly-iptracker/blob/main/src/assets/images/ip-tracker-url-shortener-screenshot.png?raw=true)
 
 Link for original code challenge [here for url shortener](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G) and [here or ip tracker](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0)
 
 Starting project source code provided by [github.com/thecodercoder](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G)
+
+## Getting Started
+
+### Prerequisites
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+1. Get a free API Key at [https://geo.ipify.org/signup](https://geo.ipify.org/signup)
+2. Clone the repo
+  ```sh
+  git clone https://github.com/adrianrtownsend/react-shortly-iptracker.git
+  ```
+3. Install NPM packages
+  ```sh
+  npm install
+  ```
+4. Create a new `.env` file and enter your API Key
+  ```
+  REACT_APP_LEAFLET_API_KEY='ENTER YOUR API';
+  ```
 
 ## Available Scripts
 
