@@ -19,8 +19,8 @@ const footer_links: Array<Ifooter__links> = [
 ];
 
 const Footer = () => {
-  const footerLinks = footer_links.map(f => (
-    <div className="d-flex flex-column mb-5">
+  const footerLinks = footer_links.map((f, index) => (
+    <div key={index} className="d-flex flex-column mb-5">
       <h5>{f.header}</h5>
       {f['links'].map(l => <a href="/">{l}</a>)}
     </div>

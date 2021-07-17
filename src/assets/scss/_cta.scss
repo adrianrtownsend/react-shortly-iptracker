@@ -2,6 +2,10 @@
 
   color: $white;
 
+  h1 {
+    text-align: center;
+  }
+
   &__image {
     position: relative;
     background-size: cover;

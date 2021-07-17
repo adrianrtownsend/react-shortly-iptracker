@@ -70,10 +70,8 @@ const Feature = () => {
               className="shortener__input w-100" 
               id="url"
               value={link}
-              onChange={e => {
-                console.log('link is: ', link);
-                setLink(e.target.value);
-              }}
+              onKeyPress={e => { if(e.key === 'Enter') shortenLink(link) }}
+              onChange={e => setLink(e.target.value)}
             />
           </div>
           <div className="col-lg-2 my-1">
@@ -132,10 +130,10 @@ const Feature = () => {
     <section className="feature">
       {Shortener}
       <div className="container px-3 pb-5">
-        <div className="w-100 my-5">
+        <div className="w-100 my-1">
           {displayLinks}
         </div>
-        <div className="feature__header row">
+        <div className="feature__header pt-5 row">
             <div className="col-md-6 mx-auto">
             <h1>Advanced Statistics</h1>
             <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>

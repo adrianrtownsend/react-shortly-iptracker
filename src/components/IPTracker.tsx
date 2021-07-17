@@ -1,38 +1,56 @@
-import React, { useState, useEffect } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { useState, useEffect, useRef } from 'react';
+import { MapContainer, TileLayer, Marker, useMapEvent } from 'react-leaflet'
 
 interface IIpData {
   ip: string;
   location: {
-  city: string;
-  state: string;
-  postalCode: string;
-  }
-  timezone: string;
+      country: string
+      region: string;
+      city: string;
+      lat: number;
+      lng: number;
+      postalCode: string;
+      timezone: string;
+      geonameId: number;
+  },
+  as: {
+      asn: number;
+      name: string;
+      route: string;
+      domain: string;
+      type: string;
+  },
   isp: string;
+  proxy: {
+      proxy: boolean;
+      vpn: boolean;
+      tor: boolean;
+  }
 }
 
 const IPTracker = () => {
   const [ipAddress, setIpAddress] = useState<string>('');
-  const [ipData] = useState<IIpData>({
-    ip: '',
-    location: {
-      city: '',
-      state: '',
-      postalCode: ''
-    },
-    timezone: '',
-    isp: ''
-  });
+  const [ipData, setIpData] = useState<IIpData | undefined>();
+  const [mapCoor, setMapCoor] = useState({lat: 37.38605, lng: -122.08385});
 
-  const getIpData = (ipAddress: string) => {
-    console.log('ipData: ', ipAddress);
+  const getLocation = (ipAddress?: string) => {
+    fetch(`https://geo.ipify.org/api/v1?apiKey=${process.env.REACT_APP_LEAFLET_API_KEY}&ipAddress=${ipAddress ? ipAddress : '8.8.8.8'}`)
+    .then(res => res.json())
+    .then(
+      res => {        
+        console.log('leaflet response: ', res);
+        setIpData(res);
+      },
+      err => {
+        console.log('error: ', err);
+      }
+    );
   };
 
+  // on load get user's location
   useEffect(() => {
-    const ip = '8.8.8.8';
-    getIpData(ip);
-  }, [])
+    getLocation();
+  },[]);
   
   return (
     <section className="iptracker">
@@ -49,12 +67,13 @@ const IPTracker = () => {
               value={ipAddress}
               name="ipAddress"
               onChange={e => setIpAddress(e.target.value)}
+              onKeyPress={e => { if(e.key === 'Enter') getLocation(ipAddress) }}
             />
             <div className="input-group-append">
               <button 
                 className="btn btn-outline-secondary" 
                 type="button"
-                onClick={() => getIpData(ipAddress)}
+                onClick={() => getLocation(ipAddress)}
               >&gt;</button>
             </div>
           </div>
@@ -65,22 +84,34 @@ const IPTracker = () => {
           <div className="iptracker__stats__container col-md-10 mx-auto row">
             <div className="col-md-3 iptracker__field">
               <p>IP ADDRESS</p>
-              <h3>{ipData.ip}</h3>
+              <h3>{ipData ? ipData.ip : '--'}</h3>
             </div>
             <div className="col-md-3 iptracker__field">
               <p>LOCATION</p>
-              <h3>{ipData.location.city} {ipData.location.state} {ipData.location.postalCode}</h3>
+              <h3>{ipData ? `${ipData.location.city}, ${ipData.location.region} ${ipData.location.postalCode}` : '--'}</h3>
             </div>
             <div className="col-md-3 iptracker__field">
               <p>TIMEZONE</p>
-              <h3>{ipData.timezone}</h3>
+              <h3>{ipData ? ipData.location.timezone : '--'}</h3>
             </div>
             <div className="col-md-3 iptracker__field">
               <p>ISP</p>
-              <h3>{ipData.isp}</h3>
+              <h3>{ipData ? ipData.isp : '--'}</h3>
             </div>
           </div>
         </div>
+        <MapContainer 
+          className="w-100 h-100 iptracker__map"
+          center={[mapCoor.lat, mapCoor.lng]} 
+          zoom={13} 
+          scrollWheelZoom={false}>
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={[mapCoor.lat, mapCoor.lng]}>
+          </Marker>
+        </MapContainer>
       </div>
     </section>
   );
