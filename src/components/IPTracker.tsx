@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from 'react';
-import { MapContainer, TileLayer, Marker, useMapEvent } from 'react-leaflet'
+import { useState, useEffect } from 'react';
+import { MapContainer, TileLayer, Marker } from 'react-leaflet'
 
 interface IIpData {
   ip: string;
