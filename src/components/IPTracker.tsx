@@ -123,14 +123,6 @@ const IPTracker = () => {
 					<TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
 					<Marker position={[mapCoor.lat, mapCoor.lng]}></Marker>
         </MapContainer>*/}
-				<MapContainer
-					center={position}
-					zoom={13}
-					scrollWheelZoom={false}
-				>
-					<TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
-					<Marker position={position}></Marker>
-				</MapContainer>
 			</div>
 		</section>
 	);
