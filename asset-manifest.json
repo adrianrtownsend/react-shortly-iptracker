@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.34467ff8.css",
-    "main.js": "/static/js/main.0386c229.js",
-    "static/js/787.04811c29.chunk.js": "/static/js/787.04811c29.chunk.js",
-    "static/media/pattern-bg.png": "/static/media/pattern-bg.a60a3c85aa8b88aac4b7.png",
-    "static/media/illustration-working.svg": "/static/media/illustration-working.c9b5ef5452363d8be3df.svg",
-    "static/media/logo.svg": "/static/media/logo.834643034343520f3b4d7e43111ed4d8.svg",
-    "static/media/bg-boost-desktop.svg": "/static/media/bg-boost-desktop.772154c9b0e451733f5e.svg",
-    "static/media/bg-boost-mobile.svg": "/static/media/bg-boost-mobile.4b04bd89ea775da3deff.svg",
-    "static/media/bg-shorten-desktop.svg": "/static/media/bg-shorten-desktop.0d9742f433f4b0d8752b.svg",
-    "index.html": "/index.html",
-    "main.34467ff8.css.map": "/static/css/main.34467ff8.css.map",
-    "main.0386c229.js.map": "/static/js/main.0386c229.js.map",
-    "787.04811c29.chunk.js.map": "/static/js/787.04811c29.chunk.js.map"
+    "main.css": "/react-shortly-iptracker/static/css/main.71a7d575.css",
+    "main.js": "/react-shortly-iptracker/static/js/main.f238ac8e.js",
+    "static/js/787.04811c29.chunk.js": "/react-shortly-iptracker/static/js/787.04811c29.chunk.js",
+    "static/media/pattern-bg.png": "/react-shortly-iptracker/static/media/pattern-bg.a60a3c85aa8b88aac4b7.png",
+    "static/media/illustration-working.svg": "/react-shortly-iptracker/static/media/illustration-working.c9b5ef5452363d8be3df.svg",
+    "static/media/logo.svg": "/react-shortly-iptracker/static/media/logo.834643034343520f3b4d7e43111ed4d8.svg",
+    "static/media/bg-boost-desktop.svg": "/react-shortly-iptracker/static/media/bg-boost-desktop.772154c9b0e451733f5e.svg",
+    "index.html": "/react-shortly-iptracker/index.html",
+    "static/media/bg-boost-mobile.svg": "/react-shortly-iptracker/static/media/bg-boost-mobile.4b04bd89ea775da3deff.svg",
+    "static/media/bg-shorten-desktop.svg": "/react-shortly-iptracker/static/media/bg-shorten-desktop.0d9742f433f4b0d8752b.svg",
+    "main.71a7d575.css.map": "/react-shortly-iptracker/static/css/main.71a7d575.css.map",
+    "main.f238ac8e.js.map": "/react-shortly-iptracker/static/js/main.f238ac8e.js.map",
+    "787.04811c29.chunk.js.map": "/react-shortly-iptracker/static/js/787.04811c29.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.34467ff8.css",
-    "static/js/main.0386c229.js"
+    "static/css/main.71a7d575.css",
+    "static/js/main.f238ac8e.js"
   ]
 }
