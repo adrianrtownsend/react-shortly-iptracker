@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-shortly-iptracker/static/css/main.71a7d575.css",
-    "main.js": "/react-shortly-iptracker/static/js/main.f238ac8e.js",
+    "main.js": "/react-shortly-iptracker/static/js/main.142709cd.js",
     "static/js/787.04811c29.chunk.js": "/react-shortly-iptracker/static/js/787.04811c29.chunk.js",
     "static/media/pattern-bg.png": "/react-shortly-iptracker/static/media/pattern-bg.a60a3c85aa8b88aac4b7.png",
     "static/media/illustration-working.svg": "/react-shortly-iptracker/static/media/illustration-working.c9b5ef5452363d8be3df.svg",
@@ -11,11 +11,11 @@
     "static/media/bg-boost-mobile.svg": "/react-shortly-iptracker/static/media/bg-boost-mobile.4b04bd89ea775da3deff.svg",
     "static/media/bg-shorten-desktop.svg": "/react-shortly-iptracker/static/media/bg-shorten-desktop.0d9742f433f4b0d8752b.svg",
     "main.71a7d575.css.map": "/react-shortly-iptracker/static/css/main.71a7d575.css.map",
-    "main.f238ac8e.js.map": "/react-shortly-iptracker/static/js/main.f238ac8e.js.map",
+    "main.142709cd.js.map": "/react-shortly-iptracker/static/js/main.142709cd.js.map",
     "787.04811c29.chunk.js.map": "/react-shortly-iptracker/static/js/787.04811c29.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.71a7d575.css",
-    "static/js/main.f238ac8e.js"
+    "static/js/main.142709cd.js"
   ]
 }
