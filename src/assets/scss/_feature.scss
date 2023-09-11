@@ -1,0 +1,76 @@
+.feature {
+  position: relative;
+  background-color: $gray;
+  padding-top: 5rem;
+
+  &__header {
+    padding-bottom: 5rem;
+
+    h1, p {
+      text-align: center;
+    }
+  }
+
+  &__row {
+    position: relative;
+  }
+
+  &__bar {
+    z-index: 0;
+    background-color: $cyan;
+    margin: auto;
+
+    @include breakpoint-up(medium) {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      width: 90%;
+      height: 10px;
+    }
+
+    @include breakpoint-down(medium) {
+      width: 1px;
+      height: 75%;
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -0%);
+    }
+
+  }
+
+  &__square {
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+
+    @include breakpoint-up(medium) {
+      padding: 5rem 2rem 2rem 2rem;
+    }
+
+    @include breakpoint-down(medium) {
+      padding: 3rem 2rem 2rem 2rem;
+      text-align: center;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+
+    div {
+      background-color: $darkViolet;
+      border-radius: 50%;
+      padding: 1.25rem;
+    }
+
+    @include breakpoint-up(medium) {
+      top: -3rem;
+    }
+
+    @include breakpoint-down(medium) {
+      top: -1rem;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
